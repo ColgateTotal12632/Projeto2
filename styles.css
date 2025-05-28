@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: rgb(45, 44, 44);
+  color: white;
+}
+
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.menuCentral {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menuCentral a {
+  text-decoration: none;
+  color: #c1cbd5;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menuCentral .inicio {
+  color: #8b0000;
+}
+
+.menuCentral a:hover {
+  color: #8b0000;
+}
+
+.logoImgEsquerda,
+.logoImgDireita {
+  height: 80px;
+  width: auto;
+}
+
+.linhaVertical {
+  width: 1px;
+  height: 40px;
+  background-color: #c1cbd5;
+  border-radius: 10px;
+}
+
+.linhaHorizontal {
+  height: 1px;
+  background-color: black;
+}
+
+.banner {
+  position: relative;
+  height: 600px;
+  background: linear-gradient(to right, #1f1a1a 40%, transparent);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.trapezio {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.textoBanner {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.textoBanner h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: black;
+  max-width: 400px;
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+.botaoBanner {
+  background-color: black;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-top: 2px solid rgb(77, 77, 77);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.fundoTexto {
+  color: white;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.botaoBanner:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.halftone {
+  position: absolute;
+  left: 200px;
+  top: 100px;
+  width: 400px;
+  pointer-events: none;
+}
+
+.GuiltyGearLogo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  height: 160px;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+.personagemBannerI-no {
+  position: absolute;
+  right: 300px;
+  bottom: 0;
+  height: 95%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.personagemBannerAsuka {
+  position: absolute;
+  left: 100px;
+  bottom: 0;
+  height: 95%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.personagemBannerLeo {
+  position: absolute;
+  left: 50px;
+  bottom: 0;
+  height: 95%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+.frasePersonagemI-no {
+  position: absolute;
+  right: 240px;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-left: 4px solid #8b0000;
+  font-style: italic;
+  font-size: 16px;
+  max-width: 300px;
+  z-index: 3;
+}
+
+.frasePersonagemAsuka {
+  position: absolute;
+  left: 200px;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-left: 4px solid #8b0000;
+  font-style: italic;
+  font-size: 16px;
+  max-width: 300px;
+  z-index: 3;
+}
+
+
+@keyframes aparecerDireita {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.personagemBannerI-no {
+  position: absolute;
+  right: 300px;
+  bottom: 0;
+  height: 95%;
+  object-fit: contain;
+  z-index: 2;
+  animation: aparecerDireita 1.2s ease-out forwards;
+}
+
+.frasePersonagemI-no {
+  position: absolute;
+  right: 240px;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-left: 4px solid #8b0000;
+  font-style: italic;
+  font-size: 16px;
+  max-width: 300px;
+  z-index: 3;
+  opacity: 0;
+  animation: aparecerDireita 1.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+
+
+.fraseDesafioI-no {
+  position: absolute;
+  right: 370px;
+  top: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-left: 4px solid #8b0000;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 3;
+  opacity: 0;
+  animation: aparecerDireita 1.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+
+@keyframes aparecerEsquerda {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.personagemBannerAsuka {
+  position: absolute;
+  left: 100px;
+  bottom: 0;
+  height: 95%;
+  object-fit: contain;
+  z-index: 2;
+  animation: aparecerEsquerda 1.2s ease-out backwards;
+}
+
+.frasePersonagemAsuka {
+  position: absolute;
+  left: 200px;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-left: 4px solid #8b0000;
+  font-style: italic;
+  font-size: 16px;
+  max-width: 300px;
+  z-index: 3;
+  opacity: 0;
+  animation: aparecerEsquerda 1.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.fraseDesafioAsuka {
+  position: absolute;
+  left: 370px;
+  top: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-left: 4px solid #8b0000;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 3;
+  opacity: 0;
+  animation: aparecerEsquerda 1.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .logo .logoimg {
+    margin-left: 0;
+  }
+
+  .texto-banner h1 {
+    font-size: 32px;
+  }
+
+  .btn-banner {
+    padding: 8px 20px;
+  }
+}
+
+
+
+.rodape {
+  background-color: #000;
+  padding: 40px 20px 20px;
+  color: #ccc;
+  font-size: 14px;
+  text-align: center;
+  border-top: 2px solid #8b0000;
+}
+
+.rodape-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.rodapelogo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logoArc {
+  height: 50px;
+}
+
+.titulo-rodape {
+  color: #f2f2f2;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.rodapeLinks {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rodapeLinks a {
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.rodapeLinks a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.slogan {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .rodape-logo {
+    flex-direction: column;
+  }
+}
+
+.textregra {
+
+  position: absolute;
+  right: 50px;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+  max-width: 900px;
+  word-wrap: break-word;
+  line-height: 1.2;
+  background-color: aliceblue;
+
+}
