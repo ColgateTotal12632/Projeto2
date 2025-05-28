@@ -407,14 +407,43 @@ body {
 }
 
 .textregra {
+  position: absolute;
+  right: 50px;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+  max-width: 700px;
+  word-wrap: break-word;
+  line-height: 1.2;
+  border-block-start-width: 25px;
+}
 
+.textregra h1 {
+  text-align: center;
+  color: #fe3131;
+}
+
+.textregra h2 {
+  color: #fe3131;
+}
+
+
+
+.textInformacoes {
   position: absolute;
   right: 50px;
   margin-bottom: 20px;
   color: rgb(0, 0, 0);
-  max-width: 900px;
+  max-width: 700px;
   word-wrap: break-word;
   line-height: 1.2;
-  background-color: aliceblue;
+  border-radius: 15px;
+}
 
+.textInformacoes h1 {
+  color: #8b0000;
+  margin-bottom: 10px;
+}
+
+.textInformacoes p {
+  color: white;
 }
