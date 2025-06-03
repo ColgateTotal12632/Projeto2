@@ -69,7 +69,42 @@ body {
   overflow: hidden;
   display: flex;
   align-items: center;
+  background: url("img/bg/vinhoBG.jpg") center center / cover no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+.bannerLeo {
+  position: relative;
+  background: linear-gradient(to right, #1f1a1a 40%, transparent);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: url("img/bg/vinhoBG.jpg") center center / cover no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner::before,
+.bannerLeo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.banner>*,
+.bannerLeo>* {
+  position: relative;
+  z-index: 2;
+}
+
 
 .trapezio {
   position: absolute;
@@ -90,7 +125,7 @@ body {
 .textoBanner h1 {
   font-size: 48px;
   margin-bottom: 20px;
-  color: black;
+  color: rgb(255, 255, 255);
   max-width: 400px;
   word-wrap: break-word;
   line-height: 1.2;
@@ -130,11 +165,8 @@ body {
   left: 30px;
   height: 160px;
   z-index: 2;
+  filter: drop-shadow(3px 3px 4px rgba(255, 255, 255, 0.6));
 }
-
-
-
-
 
 
 
@@ -160,13 +192,289 @@ body {
 
 .personagemBannerLeo {
   position: absolute;
-  left: 50px;
+  left: 70px;
   bottom: 0;
   height: 95%;
   object-fit: contain;
   z-index: 2;
 }
 
+
+
+
+.secaoTabela {
+  background-color: #1a1a1a;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.secaoTabela h1 {
+  color: #fe3131;
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.tabelaImagem {
+  max-width: 100%;
+  height: auto;
+  border: 4px solid #8b0000;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.secaoTabelaHero {
+  background: linear-gradient(to right, #1c1c1c 60%, #8b0000);
+  padding: 80px 20px 40px;
+  text-align: center;
+}
+
+.secaoTabelaHero h1 {
+  font-size: 48px;
+  color: white;
+  text-shadow: 3px 3px 8px black;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  color: #ccc;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.secaoTabelaConteudo {
+  position: relative;
+  padding: 60px 20px;
+  background: url("img/bg/vinhoBG.jpg") center center / cover no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.secaoTabelaConteudo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.secaoTabelaConteudo>* {
+  position: relative;
+  z-index: 1;
+}
+
+
+.TabelaMataMata {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.tabelaImagem {
+  max-width: 100%;
+  height: auto;
+  border: 4px solid #8b0000;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+}
+
+.confrontosGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cardConfronto {
+  background-color: #2c2c2c;
+  border-left: 4px solid #fe3131;
+  padding: 20px 30px;
+  color: white;
+  max-width: 300px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.cardConfronto:hover {
+  transform: scale(1.03);
+  background-color: #3a0a0a;
+}
+
+.cardConfronto h2 {
+  color: #fe3131;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+
+
+
+.parteSocial+footer {
+  margin-top: 0;
+}
+
+
+.parteSocial {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #1c1c1c 60%, #8b0000);
+  padding: 0;
+  margin: 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.conteudoSocial {
+  max-width: 50%;
+  padding-left: 60px;
+  padding-right: 40px;
+}
+
+
+.textoSocial {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff2d2d;
+  margin-bottom: 20px;
+}
+
+.botaoSocial {
+  display: inline-flex;
+  align-items: center;
+  background-color: black;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.botaoSocial:hover {
+  background-color: white;
+  color: black;
+}
+
+.botaoSocial img {
+  height: 24px;
+  margin-right: 10px;
+}
+
+.personagemSocial {
+  height: 220px;
+  object-fit: contain;
+}
+
+
+
+
+
+.secaoOutroCampeonato {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #1a1a1a 60%, #8b0000);
+  padding: 60px 40px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  min-height: 450px;
+}
+
+.conteudoCampeao {
+  max-width: 50%;
+}
+
+.conteudoCampeao h1 {
+  font-size: 36px;
+  color: #fe3131;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.conteudoCampeao p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.fotoCampeao {
+  width: 100%;
+  max-width: 300px;
+  border: 4px solid #fe3131;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.textoCampeao {
+  max-width: 300px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: white;
+}
+
+
+
+
+.galeriaEvo {
+  background-color: #1a1a1a;
+  padding: 60px 40px;
+  color: white;
+  text-align: center;
+  margin-left: 30px;
+  border-radius: 15px;
+}
+
+.galeriaEvo h2 {
+  color: #fe3131;
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px black;
+}
+
+.gridGaleria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.gridGaleria img {
+  width: 100%;
+  height: auto;
+  border: 3px solid #8b0000;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  transition: transform 0.3s, filter 0.3s;
+  cursor: pointer;
+}
+
+.gridGaleria img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+
+
+
+
+.personagemINoDireita {
+  height: 420px;
+  object-fit: contain;
+  margin-left: 40px;
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.8));
+}
 
 
 
@@ -190,6 +498,20 @@ body {
 }
 
 .frasePersonagemAsuka {
+  position: absolute;
+  left: 200px;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-left: 4px solid #8b0000;
+  font-style: italic;
+  font-size: 16px;
+  max-width: 300px;
+  z-index: 3;
+}
+
+.frasePersonagemLeo {
   position: absolute;
   left: 200px;
   bottom: 20px;
@@ -240,10 +562,8 @@ body {
   z-index: 3;
   opacity: 0;
   animation: aparecerDireita 1.8s ease-out forwards;
-  animation-delay: 0.3s;
+  animation-delay: 0.6s;
 }
-
-
 
 .fraseDesafioI-no {
   position: absolute;
@@ -298,7 +618,7 @@ body {
   z-index: 3;
   opacity: 0;
   animation: aparecerEsquerda 1.8s ease-out forwards;
-  animation-delay: 0.3s;
+  animation-delay: 0.6s;
 }
 
 .fraseDesafioAsuka {
@@ -321,6 +641,50 @@ body {
 
 
 
+
+
+.personagemBannerLeo {
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  height: 90%;
+  object-fit: contain;
+  z-index: 2;
+  animation: aparecerEsquerda 1.2s ease-out backwards;
+}
+
+.frasePersonagemLeo {
+  position: absolute;
+  left: 100px;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-left: 4px solid #8b0000;
+  font-style: italic;
+  font-size: 16px;
+  max-width: 300px;
+  z-index: 3;
+  opacity: 0;
+  animation: aparecerEsquerda 1.8s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.fraseDesafioLeo {
+  position: absolute;
+  left: 350px;
+  top: 70px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-left: 4px solid #8b0000;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 3;
+  opacity: 0;
+  animation: aparecerEsquerda 1.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
 
 
 
@@ -407,36 +771,48 @@ body {
 }
 
 .textregra {
-  position: absolute;
-  right: 50px;
-  margin-bottom: 20px;
-  color: rgb(255, 255, 255);
-  max-width: 700px;
-  word-wrap: break-word;
-  line-height: 1.2;
-  border-block-start-width: 25px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  color: white;
+  line-height: 1.6;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #8b0000;
+  border-radius: 8px;
 }
+
 
 .textregra h1 {
   text-align: center;
   color: #fe3131;
+  margin-top: 15px;
 }
 
 .textregra h2 {
   color: #fe3131;
 }
 
+.textregra li,
+.textregra ul {
+  list-style: none;
+}
+
 
 
 .textInformacoes {
-  position: absolute;
-  right: 50px;
-  margin-bottom: 20px;
-  color: rgb(0, 0, 0);
-  max-width: 700px;
-  word-wrap: break-word;
-  line-height: 1.2;
-  border-radius: 15px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  color: white;
+  line-height: 1.6;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #8b0000;
+  border-radius: 8px;
 }
 
 .textInformacoes h1 {
@@ -446,4 +822,134 @@ body {
 
 .textInformacoes p {
   color: white;
+}
+
+.TabelaMata {
+  margin-left: 500px;
+  height: 350px;
+  width: 1000px;
+  margin-top: 50px;
+}
+
+
+
+.videoBannerBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+
+
+header,
+footer {
+  position: relative;
+  z-index: 10;
+}
+
+
+
+.secaoInscricao {
+  background: url("img/incricoesBG.png") center center / cover no-repeat;
+  padding: 80px 60px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.Inscricao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 2px solid #8b0000;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.ladoEsquerdo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+}
+
+.qrCode {
+  width: 100%;
+  max-width: 240px;
+  border: 3px solid #fff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.legendaQR {
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.ladoDireito {
+  flex: 1;
+}
+
+.ladoDireito h1 {
+  font-size: 36px;
+  color: #fe3131;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px black;
+}
+
+.ladoDireito p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.botaoInscricao {
+  display: inline-block;
+  background-color: #8b0000;
+  color: white;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  border: 2px solid white;
+}
+
+.botaoInscricao:hover {
+  background-color: #fe3131;
+  color: black;
+}
+
+
+
+
+
+.ladoDireito {
+  position: relative;
+  flex: 1;
+  padding-bottom: 150px;
+}
+
+.decoracaoInscricao {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.decoracaoInscricao img {
+  width: 150px;
+  pointer-events: none;
 }
